@@ -10,13 +10,19 @@ public class Main {
             if(people > 1){
                 break;
             }
-            System.out.println("Введено некоректное количество людей!\nПопробйте ещё раз!");
+            System.out.println("Введено некоректное количество людей!\nПопробуйте ещё раз!");
         }
         sum.sum();
-        Formatter formatter = new Formatter(0);
-        formatter.ruble(sum.sum/people);
-        String zxc = String.format("%.2f", (sum.sum/ people));
-        System.out.println("Добавленные товары:\n"+sum.list);
-        System.out.println("Сумма которую должен заплатить каждый - "+zxc+" "+ formatter.rub+".");
+        if(sum.i != 0){
+            Formatter formatter = new Formatter(0);
+            formatter.ruble(sum.sum/people);
+            String zxc = String.format("%.2f", (sum.sum/ people));
+            System.out.println("Добавленные товары:\n"+sum.list);
+            System.out.println("Сумма которую должен заплатить каждый - "+zxc+" "+ formatter.rub+".");
+        }
+        else {
+            System.out.println("Вы не добавили ни одного товара.");
+
+        }
         }
     }

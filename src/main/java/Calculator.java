@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Calculator {
     double sum = 0;
     String list = "";
