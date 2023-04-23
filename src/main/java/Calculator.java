@@ -27,16 +27,12 @@ public class Calculator {
                         break;
                     }
                     System.out.println("Введена неправльная цена товара!");
-
                 }
                 else {
                     System.out.println("Введена неправльная цена товара!");
                     scanner.next();
                 }
             }
-
         }
-
-
     }
 }

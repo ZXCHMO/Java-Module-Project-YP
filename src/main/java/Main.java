@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Calculator sum = new Calculator();
         int people;
         while(true){
-            Scanner scanner = new Scanner(System.in);
             System.out.println("На сколько людей разделить счет?");
             if(scanner.hasNextInt()){
                 people = scanner.nextInt();
@@ -25,11 +25,11 @@ public class Main {
             String zxc = String.format("%.2f", (sum.sum/ people));
             System.out.println("Добавленные товары:\n"+sum.list);
             System.out.println("Сумма которую должен заплатить каждый - "+zxc+" "+ formatter.rub+".");
+            scanner.close();
         }
         else {
             System.out.println("Вы не добавили ни одного товара.");
-
-
+            scanner.close();
         }
         }
     }
