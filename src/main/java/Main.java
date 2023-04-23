@@ -6,11 +6,17 @@ public class Main {
         while(true){
             Scanner scanner = new Scanner(System.in);
             System.out.println("На сколько людей разделить счет?");
-            people = scanner.nextInt();
-            if(people > 1){
-                break;
+            if(scanner.hasNextInt()){
+                people = scanner.nextInt();
+                if(people > 1){
+                    break;
+                }
+                System.out.println("Введено некоректное количество людей!\nПопробуйте ещё раз!");
             }
-            System.out.println("Введено некоректное количество людей!\nПопробуйте ещё раз!");
+            else{
+                System.out.println("Введено некоректное количество людей!\nПопробуйте ещё раз!");
+                scanner.next();
+            }
         }
         sum.sum();
         if(sum.i != 0){
@@ -22,6 +28,7 @@ public class Main {
         }
         else {
             System.out.println("Вы не добавили ни одного товара.");
+
 
         }
         }
